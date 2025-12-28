@@ -3,48 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clock world</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=PT+Mono&family=Pinyon+Script&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
+    <title>Clock world</title>
   </head>
   <body>
     <div class="container">
-      <h1>World Clocks</h1>
+      <header>
+        <h1>World Clocks</h1>
+
+        <select name="city" id="cities" class="cities-list">
+          <option value="">Add cities to the world clock</option>
+          <option value="">Sydney</option>
+          <option value="">Rome</option>
+          <option value="">Sønderborg</option>
+        </select>
+      </header>
+      <main>
+        <div class="each-city">
+          <div class="each-city-remove-button"><button>-</button></div>
+          <div>
+            <div class="each-city-name">Melbourne 🇺🇸</div>
+            <div class="each-city-date">December 28th 2025</div>
+          </div>
+          <div class="each-city-time">12:15:01 PM</div>
+        </div>
+        <div class="each-city">
+          <div class="each-city-remove-button"><button>-</button></div>
+          <div>
+            <div class="each-city-name">Here 🇺🇸</div>
+            <div class="each-city-date">December 28th 2025</div>
+          </div>
+          <div class="each-city-time">12:15:01 PM</div>
+        </div>
+      </main>
     </div>
 
-    <select name="city" id="cities">
-      <option value="s">Select cities</option>
-      <option value="">Sydney</option>
-      <option value="">Rome</option>
-      <option value="">Sønderborg</option>
-    </select>
-
-    <div class="selected-city">
-      <div class="name-city">
-        Los Angeles 🇺🇸
-        <p>December 28th 2025</p>
-      </div>
-      <div class="time-city">8:12:35 AM</div>
-      <div class="name-city">
-        Los Angeles 🇺🇸
-        <p>December 28th 2025</p>
-      </div>
-      <div class="time-city">8:12:35 AM</div>
-      <div class="name-city">
-        Los Angeles 🇺🇸
-        <p>December 28th 2025</p>
-      </div>
-      <div class="time-city">8:12:35 AM</div>
-      <div class="name-city">
-        Los Angeles 🇺🇸
-        <p>December 28th 2025</p>
-      </div>
-      <div class="time-city">8:12:35 AM</div>
-      <div class="name-city">
-        Los Angeles 🇺🇸
-        <p>December 28th 2025</p>
-      </div>
-      <div class="time-city">8:12:35 AM</div>
-    </div>
-    <footer>This project was coded by Lilia....</footer>
+    <footer>
+      This project was coded with 💛 by
+      <a href="https://github.com/pianellalilia-dot" target="_blank">Lilia</a>.
+      It is
+      <a
+        href="https://github.com/pianellalilia-dot/world-clock-melbourne"
+        target="_blank"
+      >
+        open-source on GitHub</a
+      >
+      and
+      <a href="#" target="">hosted on Netlify</a>.
+    </footer>
+    <script src="src/java.js"></script>
   </body>
 </html>

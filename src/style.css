@@ -1,0 +1,75 @@
+body {
+  color: #272142;
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    rgb(255, 124, 0) 0%,
+    rgb(255, 124, 0) 15.9%,
+    rgb(255, 163, 77) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
+  );
+  min-height: 100vh;
+
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  background: white;
+  max-width: 600px;
+  display: block;
+  margin: 120px auto 0;
+  padding: 30px;
+  border-radius: 30px;
+}
+h1 {
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+header .cities-list {
+  width: 80%;
+  padding: 10px 15px;
+  display: block;
+  margin: 10px auto 20px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+}
+main .each-city-remove-button {
+  position: relative;
+  top: 20px;
+  font-weight: 700;
+}
+main .each-city {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #938fa1;
+  padding: 20px;
+}
+main .each-city:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+main .each-city-name {
+  font-size: 32px;
+}
+
+main .each-city-date {
+  color: #938fa1;
+}
+
+main .each-city-time {
+  font-size: 48px;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+}
+footer a {
+  color: rgb(255, 124, 0);
+}
