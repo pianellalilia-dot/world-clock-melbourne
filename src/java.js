@@ -1,4 +1,4 @@
-function showCurrentLocation() {
+function showSelectedLocation() {
   let cityTimezones = document.querySelectorAll(".each-city-timezone");
   let cityDates = document.querySelectorAll(".each-city-date");
   let cityTimes = document.querySelectorAll(".each-city-time");
@@ -25,38 +25,17 @@ function showCurrentLocation() {
   }
 }
 
-// function showCorrectName() {
-//   let cityNames = document.querySelectorAll(".each-city-name");
-//   let numCities = cityNames.length;
-//   for (let i = 0; i < numCities; i++) {
-//     cityNames[i].innerHTML = cityNames[i].innerHTML.split("/")[1];
-//   }
-// }
-
-//selectedCityName = selectedCityName.split("/")[1];
-
-/*let cityDate = document.querySelector("#each-city-date");
-  let currentCityDate = moment().format(`MMMM Do YYYY`);
-  cityDate.innerHTML = currentCityDate;
-
-  let cityTime = document.querySelector("#each-city-time");
-  let currentCityTime = moment().format(`h:mm:ss A`);
-  cityTime.innerHTML = currentCityTime;*/
-
-function showCity(event) {
-  let cityList = document.querySelector("#clock-worlds");
+function showCity() {
   let selectedCity = document.querySelector("#cities");
   let selectedCityTimezone = selectedCity.value;
   let selectedCityTime = moment().tz(selectedCityTimezone).format(`h:mm:ss A`);
   let selectedCityDate = moment()
     .tz(selectedCityTimezone)
     .format(`MMMM Do YYYY`);
-  //   if (selectedCityTimezone === "") {
-  //     let selectedCityName = "3";
-  //   } else {
-  let selectedCityName = selectedCityTimezone.split("/")[1];
 
-  cityList.innerHTML += `     <div class="each-city" id="each-city">
+  let selectedCityName = selectedCityTimezone.split("/")[1];
+  let cityList = document.querySelector("#clock-worlds");
+  cityList.innerHTML += `<div class="each-city" id="each-city">
           <div class="each-city-remove-button"><button>-</button></div>
           <div>
             <div class="each-city-name">${selectedCityName}</div>
@@ -65,14 +44,27 @@ function showCity(event) {
           </div>
           <div class="each-city-time" id="each-city-time">${selectedCityTime}</div>
         </div>`;
-  //   }
-  //showCurrentLocation();
-  //   showCorrectName();
+}
+function handleSelectedCity(event) {
+  let selectedCity = document.querySelector("#cities");
+  let selectedCityTimezone = selectedCity.value;
+  console.log(selectedCityTimezone);
+  let arrayWorldClockCities = document.querySelectorAll(".each-city-timezone");
+  console.log(arrayWorldClockCities);
+  let dummyVariable = false;
+  for (let index = 0; index < arrayWorldClockCities.length; index++) {
+    if (selectedCityTimezone === arrayWorldClockCities[index].innerHTML) {
+      dummyVariable = true;
+    }
+  }
+  if (dummyVariable === false) {
+    showCity();
+  }
 }
 let firstCityTimeZone = document.querySelector("#first-city-time-zone");
 firstCityTimeZone.innerHTML = moment.tz.guess();
-showCurrentLocation();
-setInterval(showCurrentLocation, 1000);
+showSelectedLocation();
+setInterval(showSelectedLocation, 1000);
 
 let optionalCities = document.querySelector("#cities");
-optionalCities.addEventListener("change", showCity);
+optionalCities.addEventListener("change", handleSelectedCity);
