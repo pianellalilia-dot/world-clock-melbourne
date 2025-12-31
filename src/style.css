@@ -39,10 +39,10 @@ header label {
   text-align: center;
 }
 header .cities-list {
-  width: 80%;
+  width: 90%;
   padding: 10px 15px;
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
   font-size: 16px;
   text-align: center;
   border-radius: 10px;
@@ -85,6 +85,8 @@ main .each-city-date {
 
 main .each-city-time {
   font-size: 48px;
+  position: relative;
+  right: 6px;
 }
 footer {
   text-align: center;
