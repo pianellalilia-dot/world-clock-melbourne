@@ -47,11 +47,24 @@ header .cities-list {
   text-align: center;
   border-radius: 10px;
 }
-main .each-city-remove-button {
-  position: relative;
-  top: 20px;
+main .each-city-remove-button button {
+  background: rgb(255, 124, 0);
+  padding: 6px 12px;
+  border: 1px solid rgb(255, 124, 0);
+  border-radius: 10px;
   font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  top: 17px;
+  left: 10px;
+  transition: all 200ms ease-in-out;
 }
+
+main .each-city-remove-button button:hover {
+  background-color: rgb(255, 163, 77);
+  cursor: pointer;
+}
+
 main .each-city {
   display: flex;
   justify-content: space-between;
