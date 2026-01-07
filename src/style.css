@@ -96,7 +96,7 @@ main .each-city-date {
 }
 
 main .each-city-time {
-  font-size: 48px;
+  font-size: 46px;
   flex: 3;
   flex-wrap: wrap;
   text-align: left;
