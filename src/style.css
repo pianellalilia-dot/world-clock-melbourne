@@ -56,14 +56,19 @@ main .each-city-remove-button button {
   background-color: rgb(215, 237, 219);
   border: rgb(215, 237, 219);
 
-  padding: 6px 12px;
+  padding: 6px 32px;
 
   border-radius: 10px;
   font-weight: 700;
   font-size: 18px;
   transition: all 200ms ease-in-out;
   text-align: center;
-  margin: 10px 0 0 0;
+  margin: 10px auto;
+  line-height: 1.5;
+
+  margin-top: 16px;
+
+  letter-spacing: 3px;
 }
 
 main .each-city-remove-button button:hover {
@@ -93,7 +98,7 @@ main .each-city-central-box {
 }
 
 main .each-city-name {
-  font-size: 32px;
+  font-size: 38px;
 }
 
 main .each-city-date {
@@ -124,6 +129,6 @@ footer a {
   .each-city-name,
   .each-city-timezone,
   .each-city-date {
-    text-align: left;
+    text-align: center;
   }
 }
